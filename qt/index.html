@@ -474,7 +474,7 @@ button{touch-action:manipulation;-webkit-appearance:none;appearance:none}
       <g class="node" id="n5"><circle cx="236" cy="178" r="9" fill="rgba(255,190,225,.28)"/><circle cx="236" cy="178" r="4.5" fill="#fff"/></g>
       <g class="lbl" id="l5"><text class="hname" x="249" y="176">Nguyễn Thị Định</text><text class="hyear" x="249" y="190">1920–1992</text></g>
       <g class="node" id="n6"><circle cx="180" cy="252" r="16" fill="rgba(255,217,138,.22)"/><circle cx="180" cy="252" r="7" fill="#ffd98a"/><path d="M180 232v40M160 252h40" stroke="#ffd98a" stroke-width="1.2" opacity=".7"/></g>
-      <g class="lbl" id="l6"><text class="hyou" x="180" y="286" text-anchor="middle">và cậu nữa</text></g>
+      <g class="lbl" id="l6"><text class="hyou" x="180" y="286" text-anchor="middle">và <tspan fill="#ff6fa5">em</tspan> nữa</text></g>
     </svg>
   </div></section>
 
@@ -564,8 +564,8 @@ button{touch-action:manipulation;-webkit-appearance:none;appearance:none}
     <div class="f-sub">chúc mừng ngày</div>
     <h1>Phụ nữ Việt Nam</h1>
     <div class="f-date">20 · 10</div>
-    <p class="f-to" id="f-to">gửi người phụ nữ mà tớ trân trọng</p>
-    <p class="f-msg">Thế gian này cần nhiều hơn những điều dịu dàng, những nụ cười chân thành và những câu chuyện đẹp. Và tớ mong, thế giới của cậu luôn ngập tràn những điều như thế, như cách tớ vẫn cầu mong mình có thể trở thành một phần dịu dàng trong cuộc đời cậu.</p>
+    <p class="f-to" id="f-to">gửi người phụ nữ mà anh yêu</p>
+    <p class="f-msg">Thế gian này cần nhiều hơn những điều dịu dàng, những nụ cười chân thành và những câu chuyện đẹp. Và anh mong, thế giới của em luôn ngập tràn những điều như thế, như cách anh vẫn cầu mong mình có thể trở thành một phần dịu dàng trong cuộc đời em.</p>
     <div class="f-act">
       <button id="b-link" class="alt" hidden>chép link</button>
       <button id="b-replay" class="alt">xem lại</button>
@@ -621,7 +621,7 @@ const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&q
 
 /* ================= KỊCH BẢN ================= */
 const S=[
- {say:TO?'này <em>'+esc(TO)+'</em> ơi!':'này cậu ơi!', bars:1.1, mood:'wave', mode:'hero', bg:0, fx:{meteor:1}},
+ {say:TO?'này <em>'+esc(TO)+'</em> ơi!':'này <em>be<em> ơi!', bars:1.1, mood:'wave', mode:'hero', bg:0, fx:{meteor:1}},
  {say:'tớ là <em>Kiên</em> — nàng tiên nhỏ của vườn hoa', bars:1.7, mood:'talk'},
  {say:'hôm nay tớ được giao một nhiệm vụ đặc biệt lắm đó…', bars:1.7, mood:'shy'},
  {say:'vì hôm nay là…', bars:1, mood:'talk'},
@@ -632,7 +632,7 @@ const S=[
 
  {scene:'heroes', say:'trong câu chuyện đất nước, có biết bao người phụ nữ phi thường…', bars:2, mood:'talk', bg:0, fx:{meteor:1.6}, reveal:['n1','l1','n2','l2','e12']},
  {say:'từ Hai Bà Trưng, Bà Triệu thuở dựng nước, đến những người con gái kiên cường của thế kỷ XX', bars:2.4, mood:'talk', reveal:['n3','l3','e23','n4','l4','e24','n5','l5','e35','e45']},
- {say:'và còn những người không có tên trong sách: bà, mẹ, chị, cô giáo… và cả <em>cậu</em> nữa', bars:2.4, mood:'happy', reveal:['n6','l6','e46','e56'], fx:{meteor:2.2,petals:.3}},
+ {say:'và còn những người không có tên trong sách: bà, mẹ, chị, cô giáo… và cả <em>em</em> nữa', bars:2.4, mood:'happy', reveal:['n6','l6','e46','e56'], fx:{meteor:2.2,petals:.3}},
 
  {scene:'unseen', say:'có những điều rất nhỏ mà phụ nữ vẫn lặng lẽ làm mỗi ngày…', bars:2, mood:'talk', bg:2, fx:{petals:.2}},
  {say:'', bars:1.15, reveal:['c1']},
@@ -640,21 +640,21 @@ const S=[
  {say:'', bars:1.15, reveal:['c3']},
  {say:'', bars:1.4, reveal:['c4']},
  {say:'mà hiếm khi có ai nói lời cảm ơn', bars:1.8, mood:'shy'},
- {scene:'none', mode:'hero', say:'nên hôm nay, đến lượt <em>cậu</em> được quan tâm', bars:2, mood:'happy', fx:{petals:1.1}},
+ {scene:'none', mode:'hero', say:'nên hôm nay, đến lượt <em>be</em> được quan tâm', bars:2, mood:'happy', fx:{petals:1.1}},
 
- {say:'tớ xin gửi be bốn lời chúc nhé', bars:1.5, mood:'wave', bg:2},
- {scene:'health', mode:'side', say:'chúc cậu thật nhiều <em>sức khỏe</em> — để còn đi hết những nơi cậu muốn đến', bars:2.4, mood:'talk', bg:1, fx:{meteor:.6}},
- {scene:'peace', say:'chúc cậu <em>bình yên</em> — dù ngoài kia có ồn ào thế nào, nếu được, mong một phần bình yên có tớ', bars:2.2, mood:'talk', bg:1},
- {scene:'free', say:'chúc cậu đủ <em>tự do</em> để làm điều mình thích, và đủ dũng cảm để theo đuổi nó', bars:2.5, mood:'talk', bg:0, fx:{lantern:1,meteor:.8}},
- {scene:'love', say:'chúc cậu luôn được <em>yêu thương</em> — đúng cách, đúng người, và cả bởi chính cậu', bars:2.5, mood:'happy', bg:2, fx:{hearts:1,petals:.3}},
+ {say:'anh xin gửi be bốn lời chúc nhé', bars:1.5, mood:'wave', bg:2},
+ {scene:'health', mode:'side', say:'chúc em thật nhiều <em>sức khỏe</em> — để còn đi hết những nơi em muốn đến', bars:2.4, mood:'talk', bg:1, fx:{meteor:.6}},
+ {scene:'peace', say:'chúc em <em>bình yên</em> — dù ngoài kia có ồn ào thế nào, nếu được, mong một phần bình yên có anh', bars:2.2, mood:'talk', bg:1},
+ {scene:'free', say:'chúc em đủ <em>tự do</em> để làm điều mình thích, và đủ dũng cảm để theo đuổi nó', bars:2.5, mood:'talk', bg:0, fx:{lantern:1,meteor:.8}},
+ {scene:'love', say:'chúc em luôn được <em>yêu thương</em> — đúng cách, đúng người, và cả bởi chính em', bars:2.5, mood:'happy', bg:2, fx:{hearts:1,petals:.3}},
 
- {scene:'none', mode:'hero', say:'cậu không cần phải hoàn hảo đâu', bars:1.6, mood:'talk', fx:{petals:.8}},
- {say:'cậu đẹp ở cách cậu cố gắng, cách cậu cười, và cách cậu thương người khác', bars:2.4, mood:'shy'},
+ {scene:'none', mode:'hero', say:'em không cần phải hoàn hảo đâu', bars:1.6, mood:'talk', fx:{petals:.8}},
+ {say:'em đẹp ở cách em cố gắng, cách em cười, và cách em thương người khác', bars:2.4, mood:'shy'},
 
- {scene:'gift', mode:'side', say:'tớ tặng be bó hoa này nè', bars:1.8, mood:'happy', bg:3, fx:{petals:1,meadow:1.1}},
+ {scene:'gift', mode:'side', say:'anh tặng be bó hoa này nè', bars:1.8, mood:'happy', bg:3, fx:{petals:1,meadow:1.1}},
  {say:'một loài hoa không bao giờ héo — vì mỗi cánh là một lời yêu thương', bars:2.4, mood:'talk'},
 
- {scene:'question', mode:'hero', say:'cho tớ hỏi một câu thôi nhé…<br>hôm nay cậu đã <em>khen bản thân</em> chưa?', bars:2, mood:'wink', bg:2, fx:{petals:.3,meteor:1}, wait:true, reveal:['q1']},
+ {scene:'question', mode:'hero', say:'cho anh hỏi một câu thôi nhé…<br>hôm nay be đã <em>khen bản thân</em> chưa?', bars:2, mood:'wink', bg:2, fx:{petals:.3,meteor:1}, wait:true, reveal:['q1']},
  {scene:'final', mode:'side', say:'', mood:'happy', bg:3, fx:{fire:1,petals:.9,meadow:1.5}, wait:true, final:true}
 ];
 
@@ -735,16 +735,16 @@ $('#q1').addEventListener('click',e=>{
   waiting=false; $('#q1').classList.remove('on');
   mood('happy'); talk(true);
   if(b.dataset.a==='yes'){
-    say('giỏi quá! cứ khen thật nhiều vào nhé — cậu xứng đáng mà');
+    say('giỏi quá! cứ khen thật nhiều vào nhé — be xứng đáng mà');
   } else {
-    say('vậy để tớ khen giúp: cậu <em>mạnh mẽ</em> hơn cậu nghĩ, <em>dịu dàng</em> hơn cậu tưởng, và quan trọng hơn cậu vẫn nghĩ rất nhiều');
+    say('vậy để anh khen giúp: be <em>mạnh mẽ</em> hơn be nghĩ, <em>dịu dàng</em> hơn be tưởng, và quan trọng hơn be vẫn nghĩ rất nhiều');
   }
   clearTimeout(timer); timer=setTimeout(()=>go(idx+1), snap(4.4*BAR));
 });
 
 function setupFinal(){
   const to=TO||'';
-  $('#f-to').textContent = to ? 'gửi '+to+(FROM?' · từ '+FROM:'') : 'gửi người phụ nữ mà tớ trân trọng'+(FROM?' · từ '+FROM:'');
+  $('#f-to').textContent = to ? 'gửi '+to+(FROM?' · từ '+FROM:'') : 'gửi người phụ nữ mà anh yêu'+(FROM?' · từ '+FROM:'');
   if(location.protocol.startsWith('http')) $('#b-link').hidden=false;
 }
 $('#b-link').addEventListener('click',()=>{
